@@ -8,6 +8,7 @@ import navigation
 
 
 
+
 def generate(seed, width1, height1, rooms, start_room, target_room):
 
     random.seed(seed)

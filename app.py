@@ -1,7 +1,8 @@
 import merge
 import tkinter as tk
 
-
+   
+   
 def generate_map():
     width = int(width_entry.get())
     height = int(height_entry.get())

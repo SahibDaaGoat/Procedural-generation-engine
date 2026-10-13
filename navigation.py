@@ -2,6 +2,7 @@
 from collections import deque
 
 
+
 def draw_navigation(ax, rooms_list, graph, start_room, target_room):
     # Calculate the centre of each room.
     centres = []
