@@ -1,0 +1,32 @@
+# Python environments, bytecode, and local tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Packaged application and temporary build output
+FINAL/working/build/
+FINAL/working/dist/
+FINAL/working/dist_staging/
+FINAL/working/release_staging/
+*.exe
+*.dll
+*.pdb
+
+# Unity generated and machine-specific folders
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Bb]uild/
+**/[Bb]uilds/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

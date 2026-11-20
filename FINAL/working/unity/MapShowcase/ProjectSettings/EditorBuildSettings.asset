@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RoomRunner.unity
+    guid: 12f6cedb3f7f1854cb7d92272c6150cd
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

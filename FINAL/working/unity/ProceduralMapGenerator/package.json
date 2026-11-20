@@ -1,0 +1,10 @@
+{
+  "name": "com.proceduralmapgenerator.importer",
+  "version": "1.0.0",
+  "displayName": "Procedural Map Generator Importer",
+  "description": "Imports procedural multi-floor building JSON and creates a Unity blockout scene.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Procedural Map Generator"
+  }
+}

@@ -1,0 +1,1486 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "seed": 4285865,
+    "floor_count": 3,
+    "rooms_per_floor": [
+      15,
+      25,
+      10
+    ],
+    "total_room_count": 50,
+    "map_width": 800,
+    "map_height": 600
+  },
+  "coordinate_system": {
+    "origin": "bottom_left",
+    "units": "map_units",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 600
+    }
+  },
+  "floors": [
+    {
+      "id": 1,
+      "seed": 4285865,
+      "room_count": 15,
+      "rooms": [
+        {
+          "id": 1,
+          "region": {
+            "x": 513,
+            "y": 0,
+            "width": 287,
+            "height": 101
+          },
+          "bounds": {
+            "x": 581,
+            "y": 32,
+            "width": 151,
+            "height": 37
+          },
+          "center": {
+            "x": 656.5,
+            "y": 50.5
+          },
+          "connections": [
+            2,
+            10
+          ],
+          "stairs": []
+        },
+        {
+          "id": 2,
+          "region": {
+            "x": 513,
+            "y": 101,
+            "width": 287,
+            "height": 188
+          },
+          "bounds": {
+            "x": 545,
+            "y": 121,
+            "width": 223,
+            "height": 148
+          },
+          "center": {
+            "x": 656.5,
+            "y": 195.0
+          },
+          "connections": [
+            1,
+            4,
+            5,
+            10,
+            11
+          ],
+          "stairs": []
+        },
+        {
+          "id": 3,
+          "region": {
+            "x": 513,
+            "y": 439,
+            "width": 287,
+            "height": 161
+          },
+          "bounds": {
+            "x": 592,
+            "y": 454,
+            "width": 129,
+            "height": 131
+          },
+          "center": {
+            "x": 656.5,
+            "y": 519.5
+          },
+          "connections": [
+            4,
+            5,
+            7
+          ],
+          "stairs": []
+        },
+        {
+          "id": 4,
+          "region": {
+            "x": 513,
+            "y": 289,
+            "width": 179,
+            "height": 150
+          },
+          "bounds": {
+            "x": 550,
+            "y": 304,
+            "width": 105,
+            "height": 120
+          },
+          "center": {
+            "x": 602.5,
+            "y": 364.0
+          },
+          "connections": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            11
+          ],
+          "stairs": []
+        },
+        {
+          "id": 5,
+          "region": {
+            "x": 692,
+            "y": 289,
+            "width": 108,
+            "height": 150
+          },
+          "bounds": {
+            "x": 697,
+            "y": 310,
+            "width": 98,
+            "height": 108
+          },
+          "center": {
+            "x": 746.0,
+            "y": 364.0
+          },
+          "connections": [
+            2,
+            3,
+            4
+          ],
+          "stairs": []
+        },
+        {
+          "id": 6,
+          "region": {
+            "x": 229,
+            "y": 307,
+            "width": 284,
+            "height": 111
+          },
+          "bounds": {
+            "x": 281,
+            "y": 336,
+            "width": 180,
+            "height": 53
+          },
+          "center": {
+            "x": 371.0,
+            "y": 362.5
+          },
+          "connections": [
+            4,
+            7,
+            11,
+            12,
+            15
+          ],
+          "stairs": []
+        },
+        {
+          "id": 7,
+          "region": {
+            "x": 229,
+            "y": 418,
+            "width": 284,
+            "height": 182
+          },
+          "bounds": {
+            "x": 294,
+            "y": 440,
+            "width": 154,
+            "height": 138
+          },
+          "center": {
+            "x": 371.0,
+            "y": 509.0
+          },
+          "connections": [
+            3,
+            4,
+            6,
+            12,
+            13
+          ],
+          "stairs": []
+        },
+        {
+          "id": 8,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 175,
+            "height": 178
+          },
+          "bounds": {
+            "x": 15,
+            "y": 59,
+            "width": 145,
+            "height": 60
+          },
+          "center": {
+            "x": 87.5,
+            "y": 89.0
+          },
+          "connections": [
+            9,
+            14
+          ],
+          "stairs": []
+        },
+        {
+          "id": 9,
+          "region": {
+            "x": 175,
+            "y": 0,
+            "width": 114,
+            "height": 178
+          },
+          "bounds": {
+            "x": 208,
+            "y": 26,
+            "width": 48,
+            "height": 126
+          },
+          "center": {
+            "x": 232.0,
+            "y": 89.0
+          },
+          "connections": [
+            8,
+            10,
+            11,
+            15
+          ],
+          "stairs": []
+        },
+        {
+          "id": 10,
+          "region": {
+            "x": 289,
+            "y": 0,
+            "width": 224,
+            "height": 102
+          },
+          "bounds": {
+            "x": 307,
+            "y": 13,
+            "width": 188,
+            "height": 76
+          },
+          "center": {
+            "x": 401.0,
+            "y": 51.0
+          },
+          "connections": [
+            1,
+            2,
+            9,
+            11
+          ],
+          "stairs": []
+        },
+        {
+          "id": 11,
+          "region": {
+            "x": 289,
+            "y": 102,
+            "width": 224,
+            "height": 205
+          },
+          "bounds": {
+            "x": 337,
+            "y": 108,
+            "width": 128,
+            "height": 193
+          },
+          "center": {
+            "x": 401.0,
+            "y": 204.5
+          },
+          "connections": [
+            2,
+            4,
+            6,
+            9,
+            10,
+            15
+          ],
+          "stairs": [
+            1
+          ]
+        },
+        {
+          "id": 12,
+          "region": {
+            "x": 0,
+            "y": 307,
+            "width": 229,
+            "height": 128
+          },
+          "bounds": {
+            "x": 66,
+            "y": 321,
+            "width": 97,
+            "height": 100
+          },
+          "center": {
+            "x": 114.5,
+            "y": 371.0
+          },
+          "connections": [
+            6,
+            7,
+            13,
+            14,
+            15
+          ],
+          "stairs": []
+        },
+        {
+          "id": 13,
+          "region": {
+            "x": 0,
+            "y": 435,
+            "width": 229,
+            "height": 165
+          },
+          "bounds": {
+            "x": 55,
+            "y": 456,
+            "width": 119,
+            "height": 123
+          },
+          "center": {
+            "x": 114.5,
+            "y": 517.5
+          },
+          "connections": [
+            7,
+            12
+          ],
+          "stairs": []
+        },
+        {
+          "id": 14,
+          "region": {
+            "x": 0,
+            "y": 178,
+            "width": 175,
+            "height": 129
+          },
+          "bounds": {
+            "x": 27,
+            "y": 204,
+            "width": 121,
+            "height": 77
+          },
+          "center": {
+            "x": 87.5,
+            "y": 242.5
+          },
+          "connections": [
+            8,
+            12,
+            15
+          ],
+          "stairs": []
+        },
+        {
+          "id": 15,
+          "region": {
+            "x": 175,
+            "y": 178,
+            "width": 114,
+            "height": 129
+          },
+          "bounds": {
+            "x": 210,
+            "y": 214,
+            "width": 44,
+            "height": 57
+          },
+          "center": {
+            "x": 232.0,
+            "y": 242.5
+          },
+          "connections": [
+            6,
+            9,
+            11,
+            12,
+            14
+          ],
+          "stairs": []
+        }
+      ],
+      "navigation": {
+        "start_room": 1,
+        "target_room": 15,
+        "dfs_path": [
+          1,
+          2,
+          4,
+          3,
+          7,
+          6,
+          11,
+          9,
+          8,
+          14,
+          12,
+          15
+        ],
+        "shortest_path": [
+          1,
+          2,
+          11,
+          15
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "seed": 4285866,
+      "room_count": 25,
+      "rooms": [
+        {
+          "id": 1,
+          "region": {
+            "x": 0,
+            "y": 469,
+            "width": 354,
+            "height": 131
+          },
+          "bounds": {
+            "x": 93,
+            "y": 503,
+            "width": 168,
+            "height": 63
+          },
+          "center": {
+            "x": 177.0,
+            "y": 534.5
+          },
+          "connections": [
+            4,
+            5,
+            11,
+            12,
+            17
+          ],
+          "stairs": []
+        },
+        {
+          "id": 2,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 155,
+            "height": 116
+          },
+          "bounds": {
+            "x": 11,
+            "y": 5,
+            "width": 133,
+            "height": 106
+          },
+          "center": {
+            "x": 77.5,
+            "y": 58.0
+          },
+          "connections": [
+            15,
+            22,
+            23
+          ],
+          "stairs": []
+        },
+        {
+          "id": 3,
+          "region": {
+            "x": 454,
+            "y": 398,
+            "width": 109,
+            "height": 202
+          },
+          "bounds": {
+            "x": 473,
+            "y": 448,
+            "width": 71,
+            "height": 102
+          },
+          "center": {
+            "x": 508.5,
+            "y": 499.0
+          },
+          "connections": [
+            4,
+            5,
+            7,
+            10,
+            19
+          ],
+          "stairs": []
+        },
+        {
+          "id": 4,
+          "region": {
+            "x": 354,
+            "y": 398,
+            "width": 100,
+            "height": 105
+          },
+          "bounds": {
+            "x": 359,
+            "y": 407,
+            "width": 90,
+            "height": 87
+          },
+          "center": {
+            "x": 404.0,
+            "y": 450.5
+          },
+          "connections": [
+            1,
+            3,
+            5,
+            12,
+            18,
+            19
+          ],
+          "stairs": []
+        },
+        {
+          "id": 5,
+          "region": {
+            "x": 354,
+            "y": 503,
+            "width": 100,
+            "height": 97
+          },
+          "bounds": {
+            "x": 369,
+            "y": 520,
+            "width": 70,
+            "height": 63
+          },
+          "center": {
+            "x": 404.0,
+            "y": 551.5
+          },
+          "connections": [
+            1,
+            3,
+            4
+          ],
+          "stairs": []
+        },
+        {
+          "id": 6,
+          "region": {
+            "x": 138,
+            "y": 221,
+            "width": 216,
+            "height": 97
+          },
+          "bounds": {
+            "x": 195,
+            "y": 237,
+            "width": 102,
+            "height": 65
+          },
+          "center": {
+            "x": 246.0,
+            "y": 269.5
+          },
+          "connections": [
+            9,
+            11,
+            12,
+            16,
+            18,
+            23,
+            25
+          ],
+          "stairs": []
+        },
+        {
+          "id": 7,
+          "region": {
+            "x": 563,
+            "y": 398,
+            "width": 109,
+            "height": 202
+          },
+          "bounds": {
+            "x": 570,
+            "y": 411,
+            "width": 95,
+            "height": 176
+          },
+          "center": {
+            "x": 617.5,
+            "y": 499.0
+          },
+          "connections": [
+            3,
+            8,
+            10
+          ],
+          "stairs": []
+        },
+        {
+          "id": 8,
+          "region": {
+            "x": 672,
+            "y": 398,
+            "width": 128,
+            "height": 202
+          },
+          "bounds": {
+            "x": 679,
+            "y": 431,
+            "width": 114,
+            "height": 136
+          },
+          "center": {
+            "x": 736.0,
+            "y": 499.0
+          },
+          "connections": [
+            7,
+            10
+          ],
+          "stairs": []
+        },
+        {
+          "id": 9,
+          "region": {
+            "x": 354,
+            "y": 211,
+            "width": 183,
+            "height": 68
+          },
+          "bounds": {
+            "x": 401,
+            "y": 228,
+            "width": 89,
+            "height": 34
+          },
+          "center": {
+            "x": 445.5,
+            "y": 245.0
+          },
+          "connections": [
+            6,
+            10,
+            14,
+            16,
+            18,
+            19
+          ],
+          "stairs": []
+        },
+        {
+          "id": 10,
+          "region": {
+            "x": 537,
+            "y": 174,
+            "width": 263,
+            "height": 224
+          },
+          "bounds": {
+            "x": 618,
+            "y": 211,
+            "width": 101,
+            "height": 150
+          },
+          "center": {
+            "x": 668.5,
+            "y": 286.0
+          },
+          "connections": [
+            3,
+            7,
+            8,
+            9,
+            14,
+            19,
+            20,
+            21
+          ],
+          "stairs": []
+        },
+        {
+          "id": 11,
+          "region": {
+            "x": 138,
+            "y": 318,
+            "width": 84,
+            "height": 151
+          },
+          "bounds": {
+            "x": 165,
+            "y": 355,
+            "width": 30,
+            "height": 77
+          },
+          "center": {
+            "x": 180.0,
+            "y": 393.5
+          },
+          "connections": [
+            1,
+            6,
+            12,
+            17,
+            25
+          ],
+          "stairs": []
+        },
+        {
+          "id": 12,
+          "region": {
+            "x": 222,
+            "y": 318,
+            "width": 132,
+            "height": 151
+          },
+          "bounds": {
+            "x": 256,
+            "y": 338,
+            "width": 64,
+            "height": 111
+          },
+          "center": {
+            "x": 288.0,
+            "y": 393.5
+          },
+          "connections": [
+            1,
+            4,
+            6,
+            11,
+            18
+          ],
+          "stairs": []
+        },
+        {
+          "id": 13,
+          "region": {
+            "x": 354,
+            "y": 0,
+            "width": 183,
+            "height": 86
+          },
+          "bounds": {
+            "x": 409,
+            "y": 27,
+            "width": 73,
+            "height": 32
+          },
+          "center": {
+            "x": 445.5,
+            "y": 43.0
+          },
+          "connections": [
+            14,
+            15,
+            20
+          ],
+          "stairs": []
+        },
+        {
+          "id": 14,
+          "region": {
+            "x": 354,
+            "y": 86,
+            "width": 183,
+            "height": 125
+          },
+          "bounds": {
+            "x": 383,
+            "y": 122,
+            "width": 125,
+            "height": 53
+          },
+          "center": {
+            "x": 445.5,
+            "y": 148.5
+          },
+          "connections": [
+            9,
+            10,
+            13,
+            15,
+            16,
+            20
+          ],
+          "stairs": []
+        },
+        {
+          "id": 15,
+          "region": {
+            "x": 155,
+            "y": 0,
+            "width": 199,
+            "height": 134
+          },
+          "bounds": {
+            "x": 197,
+            "y": 16,
+            "width": 115,
+            "height": 102
+          },
+          "center": {
+            "x": 254.5,
+            "y": 67.0
+          },
+          "connections": [
+            2,
+            13,
+            14,
+            16,
+            23
+          ],
+          "stairs": []
+        },
+        {
+          "id": 16,
+          "region": {
+            "x": 155,
+            "y": 134,
+            "width": 199,
+            "height": 87
+          },
+          "bounds": {
+            "x": 184,
+            "y": 144,
+            "width": 141,
+            "height": 67
+          },
+          "center": {
+            "x": 254.5,
+            "y": 177.5
+          },
+          "connections": [
+            6,
+            9,
+            14,
+            15,
+            23
+          ],
+          "stairs": []
+        },
+        {
+          "id": 17,
+          "region": {
+            "x": 0,
+            "y": 355,
+            "width": 138,
+            "height": 114
+          },
+          "bounds": {
+            "x": 38,
+            "y": 371,
+            "width": 62,
+            "height": 82
+          },
+          "center": {
+            "x": 69.0,
+            "y": 412.0
+          },
+          "connections": [
+            1,
+            11,
+            24,
+            25
+          ],
+          "stairs": []
+        },
+        {
+          "id": 18,
+          "region": {
+            "x": 354,
+            "y": 279,
+            "width": 91,
+            "height": 119
+          },
+          "bounds": {
+            "x": 364,
+            "y": 285,
+            "width": 71,
+            "height": 107
+          },
+          "center": {
+            "x": 399.5,
+            "y": 338.5
+          },
+          "connections": [
+            4,
+            6,
+            9,
+            12,
+            19
+          ],
+          "stairs": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": 19,
+          "region": {
+            "x": 445,
+            "y": 279,
+            "width": 92,
+            "height": 119
+          },
+          "bounds": {
+            "x": 455,
+            "y": 305,
+            "width": 72,
+            "height": 67
+          },
+          "center": {
+            "x": 491.0,
+            "y": 338.5
+          },
+          "connections": [
+            3,
+            4,
+            9,
+            10,
+            18
+          ],
+          "stairs": []
+        },
+        {
+          "id": 20,
+          "region": {
+            "x": 537,
+            "y": 0,
+            "width": 168,
+            "height": 174
+          },
+          "bounds": {
+            "x": 556,
+            "y": 57,
+            "width": 130,
+            "height": 60
+          },
+          "center": {
+            "x": 621.0,
+            "y": 87.0
+          },
+          "connections": [
+            10,
+            13,
+            14,
+            21
+          ],
+          "stairs": []
+        },
+        {
+          "id": 21,
+          "region": {
+            "x": 705,
+            "y": 0,
+            "width": 95,
+            "height": 174
+          },
+          "bounds": {
+            "x": 729,
+            "y": 51,
+            "width": 47,
+            "height": 72
+          },
+          "center": {
+            "x": 752.5,
+            "y": 87.0
+          },
+          "connections": [
+            10,
+            20
+          ],
+          "stairs": []
+        },
+        {
+          "id": 22,
+          "region": {
+            "x": 0,
+            "y": 116,
+            "width": 70,
+            "height": 105
+          },
+          "bounds": {
+            "x": 5,
+            "y": 121,
+            "width": 60,
+            "height": 95
+          },
+          "center": {
+            "x": 35.0,
+            "y": 168.5
+          },
+          "connections": [
+            2,
+            23,
+            24
+          ],
+          "stairs": []
+        },
+        {
+          "id": 23,
+          "region": {
+            "x": 70,
+            "y": 116,
+            "width": 85,
+            "height": 105
+          },
+          "bounds": {
+            "x": 76,
+            "y": 132,
+            "width": 73,
+            "height": 73
+          },
+          "center": {
+            "x": 112.5,
+            "y": 168.5
+          },
+          "connections": [
+            2,
+            6,
+            15,
+            16,
+            22,
+            25
+          ],
+          "stairs": []
+        },
+        {
+          "id": 24,
+          "region": {
+            "x": 0,
+            "y": 221,
+            "width": 70,
+            "height": 134
+          },
+          "bounds": {
+            "x": 23,
+            "y": 237,
+            "width": 24,
+            "height": 102
+          },
+          "center": {
+            "x": 35.0,
+            "y": 288.0
+          },
+          "connections": [
+            17,
+            22,
+            25
+          ],
+          "stairs": []
+        },
+        {
+          "id": 25,
+          "region": {
+            "x": 70,
+            "y": 221,
+            "width": 68,
+            "height": 134
+          },
+          "bounds": {
+            "x": 80,
+            "y": 228,
+            "width": 48,
+            "height": 120
+          },
+          "center": {
+            "x": 104.0,
+            "y": 288.0
+          },
+          "connections": [
+            6,
+            11,
+            17,
+            23,
+            24
+          ],
+          "stairs": []
+        }
+      ],
+      "navigation": {
+        "start_room": 1,
+        "target_room": 25,
+        "dfs_path": [
+          1,
+          4,
+          3,
+          7,
+          8,
+          10,
+          9,
+          6,
+          11,
+          17,
+          24,
+          22,
+          2,
+          15,
+          13,
+          14,
+          16,
+          23,
+          25
+        ],
+        "shortest_path": [
+          1,
+          11,
+          25
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "seed": 4285867,
+      "room_count": 10,
+      "rooms": [
+        {
+          "id": 1,
+          "region": {
+            "x": 289,
+            "y": 0,
+            "width": 175,
+            "height": 390
+          },
+          "bounds": {
+            "x": 342,
+            "y": 39,
+            "width": 69,
+            "height": 312
+          },
+          "center": {
+            "x": 376.5,
+            "y": 195.0
+          },
+          "connections": [
+            2,
+            3,
+            6,
+            7,
+            9
+          ],
+          "stairs": [
+            2
+          ]
+        },
+        {
+          "id": 2,
+          "region": {
+            "x": 464,
+            "y": 0,
+            "width": 336,
+            "height": 390
+          },
+          "bounds": {
+            "x": 524,
+            "y": 115,
+            "width": 216,
+            "height": 160
+          },
+          "center": {
+            "x": 632.0,
+            "y": 195.0
+          },
+          "connections": [
+            1,
+            9,
+            10
+          ],
+          "stairs": []
+        },
+        {
+          "id": 3,
+          "region": {
+            "x": 289,
+            "y": 390,
+            "width": 89,
+            "height": 137
+          },
+          "bounds": {
+            "x": 308,
+            "y": 397,
+            "width": 51,
+            "height": 123
+          },
+          "center": {
+            "x": 333.5,
+            "y": 458.5
+          },
+          "connections": [
+            1,
+            4,
+            7,
+            8,
+            9
+          ],
+          "stairs": []
+        },
+        {
+          "id": 4,
+          "region": {
+            "x": 289,
+            "y": 527,
+            "width": 89,
+            "height": 73
+          },
+          "bounds": {
+            "x": 303,
+            "y": 542,
+            "width": 61,
+            "height": 43
+          },
+          "center": {
+            "x": 333.5,
+            "y": 563.5
+          },
+          "connections": [
+            3,
+            8,
+            9
+          ],
+          "stairs": []
+        },
+        {
+          "id": 5,
+          "region": {
+            "x": 0,
+            "y": 0,
+            "width": 110,
+            "height": 212
+          },
+          "bounds": {
+            "x": 14,
+            "y": 69,
+            "width": 82,
+            "height": 74
+          },
+          "center": {
+            "x": 55.0,
+            "y": 106.0
+          },
+          "connections": [
+            6,
+            7
+          ],
+          "stairs": []
+        },
+        {
+          "id": 6,
+          "region": {
+            "x": 110,
+            "y": 0,
+            "width": 179,
+            "height": 212
+          },
+          "bounds": {
+            "x": 143,
+            "y": 25,
+            "width": 113,
+            "height": 162
+          },
+          "center": {
+            "x": 199.5,
+            "y": 106.0
+          },
+          "connections": [
+            1,
+            5,
+            7
+          ],
+          "stairs": []
+        },
+        {
+          "id": 7,
+          "region": {
+            "x": 0,
+            "y": 212,
+            "width": 289,
+            "height": 230
+          },
+          "bounds": {
+            "x": 34,
+            "y": 225,
+            "width": 221,
+            "height": 204
+          },
+          "center": {
+            "x": 144.5,
+            "y": 327.0
+          },
+          "connections": [
+            1,
+            3,
+            5,
+            6,
+            8
+          ],
+          "stairs": []
+        },
+        {
+          "id": 8,
+          "region": {
+            "x": 0,
+            "y": 442,
+            "width": 289,
+            "height": 158
+          },
+          "bounds": {
+            "x": 15,
+            "y": 450,
+            "width": 259,
+            "height": 142
+          },
+          "center": {
+            "x": 144.5,
+            "y": 521.0
+          },
+          "connections": [
+            3,
+            4,
+            7
+          ],
+          "stairs": []
+        },
+        {
+          "id": 9,
+          "region": {
+            "x": 378,
+            "y": 390,
+            "width": 267,
+            "height": 210
+          },
+          "bounds": {
+            "x": 436,
+            "y": 449,
+            "width": 151,
+            "height": 92
+          },
+          "center": {
+            "x": 511.5,
+            "y": 495.0
+          },
+          "connections": [
+            1,
+            2,
+            3,
+            4,
+            10
+          ],
+          "stairs": []
+        },
+        {
+          "id": 10,
+          "region": {
+            "x": 645,
+            "y": 390,
+            "width": 155,
+            "height": 210
+          },
+          "bounds": {
+            "x": 686,
+            "y": 434,
+            "width": 73,
+            "height": 122
+          },
+          "center": {
+            "x": 722.5,
+            "y": 495.0
+          },
+          "connections": [
+            2,
+            9
+          ],
+          "stairs": []
+        }
+      ],
+      "navigation": {
+        "start_room": 1,
+        "target_room": 10,
+        "dfs_path": [
+          1,
+          2,
+          9,
+          10
+        ],
+        "shortest_path": [
+          1,
+          2,
+          10
+        ]
+      }
+    }
+  ],
+  "stairs": [
+    {
+      "id": 1,
+      "type": "stairs",
+      "connects_floors": [
+        1,
+        2
+      ],
+      "from": {
+        "floor": 1,
+        "room": 11
+      },
+      "to": {
+        "floor": 2,
+        "room": 18
+      },
+      "position": {
+        "x": 400.5,
+        "y": 300.5
+      },
+      "position_anchor": "center",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "id": 2,
+      "type": "stairs",
+      "connects_floors": [
+        2,
+        3
+      ],
+      "from": {
+        "floor": 2,
+        "room": 18
+      },
+      "to": {
+        "floor": 3,
+        "room": 1
+      },
+      "position": {
+        "x": 400.5,
+        "y": 300.5
+      },
+      "position_anchor": "center",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      }
+    }
+  ]
+}
