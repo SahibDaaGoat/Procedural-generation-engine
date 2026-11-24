@@ -10,29 +10,56 @@ A collection of Python experiments and tools for generating connected 2D maps an
 - **Unity importer and showcase** — a Unity package that imports generated building JSON, plus a playable example project.
 - **Early experiments** — standalone scripts in the project root and `FINAL/` preserve earlier versions and UI prototypes.
 
-## Requirements
+## Install and run the V2 browser app
 
-- Python 3.10 or newer
-- NumPy and Matplotlib for the visualization lessons
-- Unity 6.3 for the included showcase project
+You need Git and Python 3.10 or newer. The V2 browser app uses Python's standard library, so it does not need third-party packages.
 
-Install the Python visualization dependencies:
+Clone the repository and create a virtual environment from a terminal:
+
+```sh
+git clone https://github.com/SahibDaaGoat/Procedural-generation-engine.git
+cd Procedural-generation-engine
+python -m venv .venv
+```
+
+Activate the environment, then start the app from the V2 project directory.
+
+**Windows PowerShell:**
 
 ```powershell
+.\.venv\Scripts\Activate.ps1
+cd FINAL\ShowcaseV2\working
+python app.py
+```
+
+**macOS / Linux:**
+
+```sh
+source .venv/bin/activate
+cd FINAL/ShowcaseV2/working
+python app.py
+```
+
+The app opens in your browser. Enter map dimensions, a seed, floor count, and room counts, then generate a building. JSON and a standalone SVG for each floor are saved under `FINAL/ShowcaseV2/working/maps/`.
+
+If PowerShell prevents environment activation, run the app with the environment's interpreter directly:
+
+```powershell
+cd FINAL\ShowcaseV2\working
+..\..\..\.venv\Scripts\python.exe app.py
+```
+
+## Optional: install lesson dependencies
+
+The earlier Matplotlib visualization lessons need NumPy and Matplotlib. Install them from the repository root with:
+
+```sh
 python -m pip install numpy matplotlib
 ```
 
-The multi-floor browser app uses only the Python standard library.
+## Optional: open the Unity showcase
 
-## Run the browser app
-
-From the repository root:
-
-```powershell
-python FINAL/working/app.py
-```
-
-The app starts a local server and opens the interface in your browser. Use it to set the map dimensions, seed, floor count, and room distribution, then generate and export a building JSON file. Exports are saved under `FINAL/working/maps/`.
+Install Unity Hub and Unity Editor 6.3, then open `FINAL/ShowcaseV2/working/unity/MapShowcase/` as a project in Unity Hub. Open `Assets/Scenes/RoomRunner.unity` and press **Play**. To import generated JSON into another Unity project, add `FINAL/ShowcaseV2/working/unity/ProceduralMapGenerator/package.json` through Package Manager using **Add package from disk**. See `FINAL/ShowcaseV2/working/SHOWCASE_V2.md` and `FINAL/ShowcaseV2/working/UNITY_IMPORT.md` for controls and build steps.
 
 ## Run the 2D lessons
 
