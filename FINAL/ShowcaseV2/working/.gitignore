@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Python desktop-app build products
+/build/
+/dist/
+/dist_staging/
+/release_staging/
+
+# Generated maps are outputs; keep the curated ShowcaseV2 example only.
+/maps/*
+!/maps/ShowcaseV2/
+/maps/ShowcaseV2/*
+!/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600.json
+!/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600_floor-*.svg
+
+# Unity-generated and platform build files
+/unity/MapShowcase/Library/
+/unity/MapShowcase/Temp/
+/unity/MapShowcase/Obj/
+/unity/MapShowcase/Logs/
+/unity/MapShowcase/UserSettings/
+/unity/MapShowcase/Build/
+/unity/MapShowcase/Assets/StreamingAssets/
+/unity/MapShowcase/Assets/_Recovery/

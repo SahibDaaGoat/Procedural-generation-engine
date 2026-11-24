@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/map-generation/map-schema.json",
+  "title": "Generated Game Map",
+  "type": "object",
+  "required": ["schema_version", "metadata", "coordinate_system", "navigation", "rooms"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "metadata": {
+      "type": "object",
+      "required": ["seed", "room_count", "map_width", "map_height"],
+      "properties": {
+        "seed": { "type": "integer" },
+        "room_count": { "type": "integer", "minimum": 1 },
+        "map_width": { "type": "number", "exclusiveMinimum": 0 },
+        "map_height": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "coordinate_system": {
+      "type": "object",
+      "required": ["origin", "units", "bounds"],
+      "properties": {
+        "origin": { "const": "bottom_left" },
+        "units": { "const": "map_units" },
+        "bounds": { "$ref": "#/$defs/rectangle" }
+      },
+      "additionalProperties": false
+    },
+    "navigation": {
+      "type": "object",
+      "required": ["start_room", "target_room", "dfs_path", "shortest_path", "connections"],
+      "properties": {
+        "start_room": { "type": "integer", "minimum": 1 },
+        "target_room": { "type": "integer", "minimum": 1 },
+        "dfs_path": { "$ref": "#/$defs/path" },
+        "shortest_path": { "$ref": "#/$defs/path" },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "type": "integer", "minimum": 1 },
+              "to": { "type": "integer", "minimum": 1 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "region", "bounds", "center", "connections"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "region": { "$ref": "#/$defs/rectangle" },
+          "bounds": { "$ref": "#/$defs/rectangle" },
+          "center": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            },
+            "additionalProperties": false
+          },
+          "connections": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "rectangle": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number", "minimum": 0 },
+        "height": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "path": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "array", "items": { "type": "integer", "minimum": 1 } }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

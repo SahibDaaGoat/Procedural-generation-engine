@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floorplan Foundry</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PROCEDURAL MAP WORKSHOP</p>
+      <h1>Floorplan Foundry</h1>
+    </div>
+    <span class="status-pill"><span class="status-dot"></span> Local generator ready</span>
+  </header>
+
+  <main class="layout">
+    <section class="panel settings-panel" aria-labelledby="settings-title">
+      <div class="panel-heading">
+        <div class="step-number">01</div>
+        <div><h2 id="settings-title">Map settings</h2><p>Shape a multi-floor layout.</p></div>
+      </div>
+
+      <form id="generator-form">
+        <div class="field-grid">
+          <label>Map width <span>units</span><input id="width" type="number" min="3" value="800" required></label>
+          <label>Map height <span>units</span><input id="height" type="number" min="3" value="600" required></label>
+          <label>Seed <span>repeatable layout</span><input id="seed" type="number" value="4285865" required></label>
+          <label>Floors <span>1 or more</span><input id="floor-count" type="number" min="1" value="3" required></label>
+        </div>
+
+        <fieldset class="room-plan">
+          <legend>Room plan</legend>
+          <label class="radio-option"><input type="radio" name="room-mode" value="total" checked> <span><strong>Total room count</strong><small>Spread rooms as evenly as possible.</small></span></label>
+          <div id="total-control" class="mode-control"><label for="total-rooms">Rooms across all floors</label><input id="total-rooms" type="number" min="1" value="50"></div>
+          <label class="radio-option"><input type="radio" name="room-mode" value="plan"> <span><strong>Floor-by-floor plan</strong><small>Choose a different count on each floor.</small></span></label>
+          <div id="plan-control" class="mode-control" hidden><label for="room-plan-input">Rooms per floor</label><input id="room-plan-input" type="text" value="15, 25, 10" placeholder="15, 25, 10"><small>Enter one positive count per floor, separated by commas.</small></div>
+        </fieldset>
+
+        <div class="stair-note"><span class="stair-icon">↕</span><p><strong>Independent stair flights</strong><br>Each floor connection gets its own room door and landing position. The upper and lower landings can be offset.</p></div>
+        <button class="primary-button" id="generate-button" type="submit"><span>Generate building</span><span aria-hidden="true">→</span></button>
+      </form>
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <p class="form-status" id="form-status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel viewer-panel" aria-labelledby="viewer-title">
+      <div class="panel-heading viewer-heading">
+        <div class="step-number">02</div>
+        <div><h2 id="viewer-title">Floor viewer</h2><p id="viewer-subtitle">Generate a building to inspect each floor.</p></div>
+        <button id="download-json" class="secondary-button" type="button" disabled>Download JSON</button>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-illustration"><span></span><span></span><span></span></div>
+        <h3>Your floor plans will appear here</h3>
+        <p>Generate a building to view rooms, connections, and its independent stair landings.</p>
+      </div>
+
+      <div id="building-view" hidden>
+        <div class="floor-toolbar">
+          <button id="floor-down" class="floor-button" type="button" aria-label="Go down one floor">↓</button>
+          <div class="floor-current"><span id="floor-kicker">FLOOR 1</span><strong id="floor-name">Ground floor</strong><span id="floor-room-count">0 rooms</span></div>
+          <button id="floor-up" class="floor-button" type="button" aria-label="Go up one floor">↑</button>
+        </div>
+        <div class="map-frame"><svg id="map-svg" role="img" aria-label="Generated floor map"></svg></div>
+        <div class="map-legend">
+          <span><i class="legend-room"></i> Room</span>
+          <span><i class="legend-link"></i> Green: route · Red: node</span>
+          <span><i class="legend-stair">↕</i> Gold: stair · Blue: floor boundary</span>
+        </div>
+        <div class="floor-summary">
+          <div><span>Stair landing</span><strong id="stair-summary">—</strong></div>
+          <div><span>Seed</span><strong id="floor-seed">—</strong></div>
+          <div><span>Room plan</span><strong id="room-plan-summary">—</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Warm, readable maps · deterministic seeds · Unity-ready JSON</span><button id="close-app" type="button">Close generator</button></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

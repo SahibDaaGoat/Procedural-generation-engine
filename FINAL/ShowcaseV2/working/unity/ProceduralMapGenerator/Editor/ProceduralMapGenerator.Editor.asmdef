@@ -1,0 +1,14 @@
+{
+  "name": "ProceduralMapGenerator.Editor",
+  "rootNamespace": "ProceduralMapGenerator.Editor",
+  "references": ["ProceduralMapGenerator.Runtime"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
