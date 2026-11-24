@@ -6,8 +6,9 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        ('web', 'web'),
-        ('building_schema.json', '.'),
+        ('json_handoff/web', 'web'),
+        ('json_handoff/building_schema.json', '.'),
+        ('json_handoff/map_schema.json', '.'),
     ],
     hiddenimports=[],
     hookspath=[],

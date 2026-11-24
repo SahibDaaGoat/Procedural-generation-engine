@@ -8,9 +8,9 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
-from building_generator import generate_building
-from floor_diagrams import write_floor_diagrams
-from map_export import save_building_data
+from json_handoff.floor_diagrams import write_floor_diagrams
+from json_handoff.map_export import save_building_data
+from multifloor_unity.building_generator import generate_building
 
 
 def _asset_directory():

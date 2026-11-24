@@ -8,7 +8,7 @@ A collection of Python experiments and tools for generating connected 2D maps an
 - **Multi-floor generator** — Python code creates connected room layouts, stair links, and JSON map exports.
 - **Browser app** — a local web interface for configuring and previewing generated buildings.
 - **Unity importer and showcase** — a Unity package that imports generated building JSON, plus a playable example project.
-- **Early experiments** — standalone scripts in the project root and `FINAL/` preserve earlier versions and UI prototypes.
+- **Earlier experiments** — the original lessons and prototypes remain available in the `legacy` branch.
 
 ## Install and run the V2 browser app
 
@@ -40,7 +40,7 @@ cd FINAL/ShowcaseV2/working
 python app.py
 ```
 
-The app opens in your browser. Enter map dimensions, a seed, floor count, and room counts, then generate a building. JSON and a standalone SVG for each floor are saved under `FINAL/ShowcaseV2/working/maps/`.
+The app opens in your browser. Enter map dimensions, a seed, floor count, and room counts, then generate a building. JSON and a standalone SVG for each floor are saved under `FINAL/ShowcaseV2/working/json_handoff/maps/`.
 
 If PowerShell prevents environment activation, run the app with the environment's interpreter directly:
 
@@ -59,7 +59,20 @@ python -m pip install numpy matplotlib
 
 ## Optional: open the Unity showcase
 
-Install Unity Hub and Unity Editor 6.3, then open `FINAL/ShowcaseV2/working/unity/MapShowcase/` as a project in Unity Hub. Open `Assets/Scenes/RoomRunner.unity` and press **Play**. To import generated JSON into another Unity project, add `FINAL/ShowcaseV2/working/unity/ProceduralMapGenerator/package.json` through Package Manager using **Add package from disk**. See `FINAL/ShowcaseV2/working/SHOWCASE_V2.md` and `FINAL/ShowcaseV2/working/UNITY_IMPORT.md` for controls and build steps.
+Install Unity Hub and Unity Editor 6.3, then open `FINAL/ShowcaseV2/working/multifloor_unity/unity/MapShowcase/` as a project in Unity Hub. Open `Assets/Scenes/RoomRunner.unity` and press **Play**. To import generated JSON into another Unity project, add `FINAL/ShowcaseV2/working/multifloor_unity/unity/ProceduralMapGenerator/package.json` through Package Manager using **Add package from disk**. See the V2 guide and Unity import guide under `FINAL/ShowcaseV2/working/` for controls and build steps.
+
+## V2 code ownership areas
+
+The V2 source is grouped into four role-based areas:
+
+| Folder | Responsibility |
+| --- | --- |
+| `multifloor_unity/` | Multi-floor generation and the Unity package/showcase. |
+| `json_handoff/` | JSON schemas and exports, browser API and UI, floor SVGs, and the Python-to-Unity worker. |
+| `bsp_generation/` | BSP partitioning, room footprints, geometry helpers, and visual inspection. |
+| `graphs_navigation/` | Room adjacency, door-aware route graphs, pathfinding, and navigation helpers. |
+
+Shared entry points, tests, and project documentation stay at the V2 project root. See `FINAL/ShowcaseV2/working/PROJECT_REPORT.md` for the detailed pipeline and file map.
 
 ## Run the 2D lessons
 
@@ -77,16 +90,10 @@ python 11_complete_2d_generator.py --seed 42
 
 Earlier experiments are also kept in the root scripts and `FINAL/`. `05_spatial_partitioning.py` runs with its built-in settings, and `06_bsp_rooms.py` asks for a seed, dimensions, and room count. Most visualization scripts open a Matplotlib window; close it before launching the next script. A fixed seed makes a run reproducible where the script exposes a seed option.
 
-## Open the Unity showcase
-
-In Unity Hub, open `FINAL/working/unity/MapShowcase/` as a project and open `Assets/Scenes/RoomRunner.unity`. Press **Play** to explore the generated room graph. The example uses **WASD** or the arrow keys to move, **E** to go up stairs, **Q** to go down, and **R** to restart.
-
-The showcase uses the package in `FINAL/working/unity/ProceduralMapGenerator/`. Keep both folders together so the local package reference resolves. The Unity project can import other building JSON files through its Procedural Map menu.
-
 ## Map data
 
 The Python generator exports JSON containing building dimensions, floors, rooms, graph connections, navigation information, and stair links. The Unity importer reads this format to create a blockout scene. Example map JSON files are included with the Python and Unity projects.
 
 ## Notes
 
-The numbered lessons are educational prototypes. Their algorithms favor clarity over production features: corridor routing and validation are simple, and the Matplotlib plots are for inspection rather than real-time rendering. The Unity showcase demonstrates room graph navigation; it is not a complete collision-based game.
+The generator is a procedural game-map blockout, not an architectural design tool or a complete collision-based game. The Unity scene demonstrates room-graph navigation; the route representation and rendered geometry remain separate abstractions.

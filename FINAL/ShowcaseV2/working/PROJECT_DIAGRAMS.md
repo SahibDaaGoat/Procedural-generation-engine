@@ -7,21 +7,21 @@ These diagrams describe the V2 application in this folder. The browser generator
 ```mermaid
 flowchart LR
     User[User]
-    Browser[Browser UI\nweb/index.html, app.js, style.css]
+    Browser[Browser UI\njson_handoff/web]
     Entry[App entry point\napp.py]
-    HTTP[Local HTTP/API\nweb_server.py]
-    Building[Building orchestrator\nbuilding_generator.py]
-    Floor[Floor builder\ngenerator.py]
-    Partition[Partitioning\npartitioning.py, geometry.py]
-    Room[Room footprints\nrooms.py]
-    Graph[Room adjacency\ngraph.py]
-    Routes[Door-aware route graph\nroute_graph.py]
-    Export[Serializer\nmap_export.py]
-    SVG[Floor diagrams\nfloor_diagrams.py]
-    JSON[(Building JSON\nmaps/*.json)]
-    SVGFiles[(Floor SVGs\nmaps/*_floor-N.svg)]
-    Schema[JSON schemas\nmap_schema.json, building_schema.json]
-    Unity[Unity package and showcase]
+    HTTP[Local HTTP/API\njson_handoff/web_server.py]
+    Building[Building orchestrator\nmultifloor_unity/building_generator.py]
+    Floor[Floor builder\nbsp_generation/generator.py]
+    Partition[Partitioning\nbsp_generation/partitioning.py, geometry.py]
+    Room[Room footprints\nbsp_generation/rooms.py]
+    Graph[Room adjacency\ngraphs_navigation/graph.py]
+    Routes[Door-aware route graph\ngraphs_navigation/route_graph.py]
+    Export[Serializer\njson_handoff/map_export.py]
+    SVG[Floor diagrams\njson_handoff/floor_diagrams.py]
+    JSON[(Building JSON\njson_handoff/maps/*.json)]
+    SVGFiles[(Floor SVGs\njson_handoff/maps/*_floor-N.svg)]
+    Schema[JSON schemas\njson_handoff/*.json]
+    Unity[Unity package and showcase\nmultifloor_unity/unity]
 
     User --> Browser
     Browser -->|HTTP request and response| HTTP
@@ -49,13 +49,13 @@ flowchart LR
 sequenceDiagram
     actor User
     participant UI as Browser UI
-    participant Server as web_server.py
-    participant BG as building_generator.py
-    participant Floor as generator.py and floor modules
-    participant Route as route_graph.py
-    participant Export as map_export.py
-    participant Diagram as floor_diagrams.py
-    participant Disk as maps/ output directory
+    participant Server as json_handoff/web_server.py
+    participant BG as multifloor_unity/building_generator.py
+    participant Floor as bsp_generation/generator.py and floor modules
+    participant Route as graphs_navigation/route_graph.py
+    participant Export as json_handoff/map_export.py
+    participant Diagram as json_handoff/floor_diagrams.py
+    participant Disk as json_handoff/maps/ output directory
 
     User->>UI: Enter dimensions, seed, floors, room counts
     UI->>Server: POST /api/generate with settings
@@ -105,14 +105,14 @@ flowchart LR
     User[External entity: User]
     UI((1. Configure and preview\nweb UI))
     API((2. Validate request\nweb_server.py))
-    Floors((3. Generate floors\ngenerator.py))
-    BSP((3a. Partition regions\ngeometry.py, partitioning.py))
-    Rooms((3b. Create inset rooms\nrooms.py))
-    Graph((3c. Build adjacency and paths\ngraph.py))
-    Building((4. Connect floors\nbuilding_generator.py))
-    Routes((5. Build door-aware routes\nroute_graph.py))
-    Serialize((6. Serialize building\nmap_export.py))
-    SVG((7. Draw floor diagrams\nfloor_diagrams.py))
+    Floors((3. Generate floors\nbsp_generation/generator.py))
+    BSP((3a. Partition regions\nbsp_generation/geometry.py, partitioning.py))
+    Rooms((3b. Create inset rooms\nbsp_generation/rooms.py))
+    Graph((3c. Build adjacency and paths\ngraphs_navigation/graph.py))
+    Building((4. Connect floors\nmultifloor_unity/building_generator.py))
+    Routes((5. Build door-aware routes\ngraphs_navigation/route_graph.py))
+    Serialize((6. Serialize building\njson_handoff/map_export.py))
+    SVG((7. Draw floor diagrams\njson_handoff/floor_diagrams.py))
     D1[(D1: Building JSON files)]
     D2[(D2: Floor SVG files)]
     Unity[External entity: Unity importer/showcase]
@@ -144,5 +144,5 @@ flowchart LR
 
 - A fixed seed and identical inputs reproduce a layout under the same generator version.
 - A building with *N* floors has *N−1* stair transitions.
-- JSON and SVG files are written under `maps/`; the browser preview is returned directly by the API.
+- JSON and SVG files are written under `json_handoff/maps/`; the browser preview is returned directly by the API.
 - The Unity flow starts after export/import. It consumes the building JSON; it does not call the browser server during ordinary map generation.

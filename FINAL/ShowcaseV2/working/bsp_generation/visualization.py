@@ -2,8 +2,8 @@
 
 import matplotlib.pyplot as plt
 
-from geometry import center
-from navigation import draw_navigation
+from bsp_generation.geometry import center
+from graphs_navigation.navigation import draw_navigation
 
 
 def show_map(width, height, rooms, graph, start_room, target_room, stairs=None, floor_number=None):

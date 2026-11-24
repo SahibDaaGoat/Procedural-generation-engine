@@ -4,9 +4,9 @@ import math
 import random
 from threading import Lock
 
-from generator import build_floor
-from map_export import build_building_data
-from route_graph import add_route_graphs
+from bsp_generation.generator import build_floor
+from graphs_navigation.route_graph import add_route_graphs
+from json_handoff.map_export import build_building_data
 
 
 DEFAULT_FLOOR_HEIGHT = 3.0

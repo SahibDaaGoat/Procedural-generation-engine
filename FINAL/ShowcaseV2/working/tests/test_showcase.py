@@ -12,8 +12,8 @@ import tempfile
 import unittest
 from xml.etree import ElementTree
 
-from floor_diagrams import write_floor_diagrams
-from web_server import generate_from_payload
+from json_handoff.floor_diagrams import write_floor_diagrams
+from json_handoff.web_server import generate_from_payload
 
 
 def settings(seed=0, width=800, height=600, plan=(12, 15, 10)):

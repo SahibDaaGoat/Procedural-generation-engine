@@ -1,6 +1,6 @@
 # Unity map import
 
-The local package at `unity/ProceduralMapGenerator/package.json` reads building JSON version 2. Open **Window → Package Manager → Add package from disk** if using another project, then select the package manifest. The supplied MapShowcase project already includes it.
+The local package at `multifloor_unity/unity/ProceduralMapGenerator/package.json` reads building JSON version 2. Open **Window → Package Manager → Add package from disk** if using another project, then select the package manifest. The supplied MapShowcase project already includes it.
 
 Choose **Tools → Procedural Map → Import Building JSON…**, select an exported building JSON file, and save the scene. The generated root contains separate objects for each floor. Floors have a blue boundary, rooms have numbered labels and thick walls, and stair landings appear as gold diamonds.
 

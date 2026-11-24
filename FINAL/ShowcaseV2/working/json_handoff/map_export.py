@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 import sys
 
-from geometry import center
-from graph import breadth_first_path
+from bsp_generation.geometry import center
+from graphs_navigation.graph import breadth_first_path
 
 
 if getattr(sys, "frozen", False):

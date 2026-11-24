@@ -2,16 +2,16 @@
 
 import random
 
-from geometry import split_region
-from graph import build_graph, depth_first_path
-from map_export import export_map
-from partitioning import (
+from bsp_generation.geometry import split_region
+from bsp_generation.partitioning import (
     choose_region,
     generate_power_regions,
     largest_power_of_two,
     merge_to_target,
 )
-from rooms import shrink_room
+from bsp_generation.rooms import shrink_room
+from graphs_navigation.graph import build_graph, depth_first_path
+from json_handoff.map_export import export_map
 
 
 def build_floor(seed, width, height, room_count, start_room=1, target_room=None,

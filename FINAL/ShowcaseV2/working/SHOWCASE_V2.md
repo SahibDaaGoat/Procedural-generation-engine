@@ -2,7 +2,7 @@
 
 ## Run the demo
 
-Open `unity/MapShowcase/Build/ShowcaseV2-Lighting/RoomRunner.exe`. Keep the executable with the rest of that build folder. In the Unity Editor, open `unity/MapShowcase/Assets/Scenes/RoomRunner.unity` and press Play. The project uses Editor 6000.3.28f1.
+Open `multifloor_unity/unity/MapShowcase/Build/ShowcaseV2-Lighting/RoomRunner.exe`. Keep the executable with the rest of that build folder. In the Unity Editor, open `multifloor_unity/unity/MapShowcase/Assets/Scenes/RoomRunner.unity` and press Play. The project uses Editor 6000.3.28f1.
 
 Enter width, height, seed, and number of floors. Choose either a building-wide room count or a comma-separated count for each floor. Generate a map, step through the floors, and switch between the 2D overview and angled 3D view. Use **Use dark mode** to change the panel and map palette. The choice is saved for the next launch. The angled 3D view uses soft shadows from the walls and ladders. Click **Save JSON + floor SVGs** and **Open exports folder** to find the files.
 
@@ -14,7 +14,7 @@ The bundled Windows generator uses the same Python source as the desktop app. A 
 
 ## Desktop generator
 
-Open `dist/app.exe` for the browser-based version. It writes JSON and a standalone SVG for every floor to `dist/maps`.
+Open `dist/app.exe` for the browser-based version. It writes JSON and a standalone SVG for every floor to `dist/maps`. When running from source, exports go to `json_handoff/maps/`.
 
 ## Build and verify
 
@@ -27,7 +27,7 @@ python -m unittest discover -s tests -v
 Rebuild the Windows generator worker and desktop app after editing Python or web assets:
 
 ```powershell
-pyinstaller --noconfirm --onefile --name MapGenerator --distpath unity/MapShowcase/Assets/StreamingAssets --workpath build/backend --specpath build showcase_backend.py
+pyinstaller --noconfirm --onefile --name MapGenerator --distpath multifloor_unity/unity/MapShowcase/Assets/StreamingAssets --workpath build/backend --specpath build showcase_backend.py
 pyinstaller --noconfirm app.spec
 ```
 

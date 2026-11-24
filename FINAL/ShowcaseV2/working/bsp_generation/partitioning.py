@@ -1,6 +1,6 @@
 """BSP partition creation and region merging."""
 
-from geometry import area, split_region
+from bsp_generation.geometry import area, split_region
 
 
 def largest_power_of_two(number):

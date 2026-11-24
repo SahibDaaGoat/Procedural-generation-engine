@@ -10,18 +10,18 @@ venv/
 /release_staging/
 
 # Generated maps are outputs; keep the curated ShowcaseV2 example only.
-/maps/*
-!/maps/ShowcaseV2/
-/maps/ShowcaseV2/*
-!/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600.json
-!/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600_floor-*.svg
+/json_handoff/maps/*
+!/json_handoff/maps/ShowcaseV2/
+/json_handoff/maps/ShowcaseV2/*
+!/json_handoff/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600.json
+!/json_handoff/maps/ShowcaseV2/building_seed-20261116_floors-4_rooms-50_plan-13-13-12-12_width-800_height-600_floor-*.svg
 
 # Unity-generated and platform build files
-/unity/MapShowcase/Library/
-/unity/MapShowcase/Temp/
-/unity/MapShowcase/Obj/
-/unity/MapShowcase/Logs/
-/unity/MapShowcase/UserSettings/
-/unity/MapShowcase/Build/
-/unity/MapShowcase/Assets/StreamingAssets/
-/unity/MapShowcase/Assets/_Recovery/
+/multifloor_unity/unity/MapShowcase/Library/
+/multifloor_unity/unity/MapShowcase/Temp/
+/multifloor_unity/unity/MapShowcase/Obj/
+/multifloor_unity/unity/MapShowcase/Logs/
+/multifloor_unity/unity/MapShowcase/UserSettings/
+/multifloor_unity/unity/MapShowcase/Build/
+/multifloor_unity/unity/MapShowcase/Assets/StreamingAssets/
+/multifloor_unity/unity/MapShowcase/Assets/_Recovery/

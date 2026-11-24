@@ -1,7 +1,7 @@
 """Drawing helpers for room links and the selected shortest route."""
 
-from graph import breadth_first_path
-from geometry import center
+from bsp_generation.geometry import center
+from graphs_navigation.graph import breadth_first_path
 
 
 def draw_navigation(ax, rooms, graph, start_room, target_room):
